@@ -5,163 +5,173 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>دفتر الذهب — حمّل التطبيق</title>
 <meta name="description" content="دفتر الذهب: حسابات الذهب والألماس على جوالك، بلا إنترنت. كشوف العملاء والمصانع، الفواتير، المخزون والصندوق.">
-<meta property="og:title" content="دفتر الذهب — حسابات الذهب والألماس على جوالك">
+<meta property="og:title" content="دفتر الذهب — ودّع الدفتر الورقي">
 <meta property="og:description" content="فاتورة في ثوانٍ، كشف لكل عميل ومصنع، مخزون وصندوق يتحدثان تلقائياً. حمّله الآن.">
-<meta property="og:image" content="img/icon.png">
+<meta property="og:image" content="https://goldledger-app.github.io/img/icon.png">
 <link rel="icon" href="img/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Lalezar&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#1F2A44;--gold:#E2C34A;--deep:#B8860B;--ink:#2B2F3A;--muted:#6B7080;--green:#1B8A5A}
+:root{--navy:#1F2A44;--gold:#E2C34A;--deep:#B8860B;--ink:#2B2F3A;--muted:#666B7A}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
-body{font-family:"Tajawal","Geeza Pro",-apple-system,sans-serif;color:var(--ink);background:linear-gradient(160deg,#E9EEFB 0%,#F7F1E3 45%,#EBDDB8 100%) fixed;min-height:100vh;overflow-x:hidden;line-height:1.8}
-.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
-.blob{position:fixed;border-radius:50%;filter:blur(2px);z-index:0;animation:drift 9s ease-in-out infinite alternate}
-.b1{width:300px;height:300px;background:rgba(226,195,74,.38);top:-70px;right:-80px}
-.b2{width:340px;height:340px;background:rgba(143,168,240,.26);bottom:-110px;left:-110px;animation-duration:12s}
-.b3{width:170px;height:170px;background:rgba(226,195,74,.25);top:46%;left:8%;animation-duration:7s}
-@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(18px,-26px) scale(1.08)}}
+body{font-family:"Baloo Bhaijaan 2","Geeza Pro",-apple-system,sans-serif;color:var(--ink);background:linear-gradient(160deg,#E9EEFB 0%,#F7F1E3 45%,#EBDDB8 100%) fixed;min-height:100vh;overflow-x:hidden;line-height:1.55;font-size:15px}
+.wrap{max-width:860px;margin:0 auto;padding:0 14px}
+.blob{position:fixed;border-radius:50%;z-index:0;animation:drift 9s ease-in-out infinite alternate}
+.b1{width:230px;height:230px;background:rgba(226,195,74,.36);top:-70px;right:-70px}
+.b2{width:260px;height:260px;background:rgba(143,168,240,.24);bottom:-90px;left:-90px;animation-duration:12s}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(16px,-22px) scale(1.08)}}
 header,section,footer{position:relative;z-index:1}
+h1,h2,.lz{font-family:"Lalezar","Baloo Bhaijaan 2",sans-serif;font-weight:400}
+@keyframes rise{from{opacity:0;transform:translateY(36px) scale(.9)}to{opacity:1;transform:none}}
+@keyframes float{from{transform:translateY(-4px)}to{transform:translateY(5px)}}
 
-/* hero */
-.hero{padding:44px 0 26px;text-align:center}
-.icon{width:112px;height:112px;border-radius:28px;box-shadow:0 18px 40px rgba(31,42,68,.25);animation:rise .8s cubic-bezier(.2,1.3,.4,1) both,float 4s ease-in-out 1s infinite alternate}
-h1{font-size:clamp(34px,7vw,58px);font-weight:900;color:var(--navy);margin-top:16px;line-height:1.25;animation:rise .8s .12s cubic-bezier(.2,1.3,.4,1) both}
-h1 span{background:linear-gradient(90deg,#B8860B,#E2C34A,#B8860B);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 3.5s linear infinite}
+/* hero: everything important fits the first screen */
+.hero{padding:16px 0 8px;text-align:center}
+.brand{display:flex;align-items:center;justify-content:center;gap:12px;animation:rise .7s cubic-bezier(.2,1.3,.4,1) both}
+.icon{width:58px;height:58px;border-radius:16px;box-shadow:0 10px 22px rgba(31,42,68,.25);animation:float 3.6s ease-in-out infinite alternate}
+h1{font-size:40px;color:var(--navy);line-height:1.1}
+h1 span{background:linear-gradient(90deg,#B8860B,#E9CE63,#B8860B);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 3.2s linear infinite}
 @keyframes shine{to{background-position:-200% 0}}
-.tag{font-size:clamp(17px,3.6vw,22px);color:var(--muted);max-width:620px;margin:10px auto 0;animation:rise .8s .24s cubic-bezier(.2,1.3,.4,1) both}
-@keyframes rise{from{opacity:0;transform:translateY(46px) scale(.9)}to{opacity:1;transform:none}}
-@keyframes float{from{transform:translateY(-5px)}to{transform:translateY(7px)}}
-.cta{display:inline-flex;align-items:center;gap:12px;margin-top:26px;padding:17px 34px;border-radius:22px;background:var(--navy);color:#fff;font-weight:800;font-size:21px;text-decoration:none;position:relative;box-shadow:0 16px 34px rgba(31,42,68,.3);animation:rise .8s .36s cubic-bezier(.2,1.3,.4,1) both;transition:transform .15s}
+.punch{font-family:"Lalezar",sans-serif;font-size:23px;color:var(--navy);margin-top:8px;line-height:1.35;animation:rise .7s .1s cubic-bezier(.2,1.3,.4,1) both}
+.swap{display:inline-block;color:var(--deep);min-width:86px;text-align:center;transition:opacity .28s,transform .28s}
+.swap.out{opacity:0;transform:translateY(-10px)}
+.tag{font-size:15px;color:var(--muted);margin-top:2px;animation:rise .7s .18s both}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:12px;padding:12px 26px;border-radius:18px;background:var(--navy);color:#fff;font-weight:800;font-size:18px;text-decoration:none;position:relative;box-shadow:0 12px 26px rgba(31,42,68,.3);animation:rise .7s .26s cubic-bezier(.2,1.3,.4,1) both;transition:transform .15s}
 .cta:active{transform:scale(.96)}
-.cta::before{content:"";position:absolute;inset:0;border-radius:22px;background:var(--gold);z-index:-1;animation:pulse 1.6s ease-out infinite}
-@keyframes pulse{from{transform:scale(1);opacity:.7}to{transform:scale(1.28,1.6);opacity:0}}
-.cta svg{width:26px;height:26px}
-.meta{margin-top:14px;font-size:15px;color:var(--muted);animation:rise .8s .46s both}
-.soon{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px;animation:rise .8s .56s both}
-.pill{background:rgba(255,255,255,.7);border:1px solid #fff;border-radius:999px;padding:7px 16px;font-size:14.5px;font-weight:700;color:var(--navy);box-shadow:0 8px 20px rgba(31,42,68,.1)}
+.cta::before{content:"";position:absolute;inset:0;border-radius:18px;background:var(--gold);z-index:-1;animation:pulse 1.6s ease-out infinite}
+@keyframes pulse{from{transform:scale(1);opacity:.7}to{transform:scale(1.2,1.5);opacity:0}}
+.cta svg{width:21px;height:21px;animation:bob 1.1s ease-in-out infinite alternate}
+@keyframes bob{from{transform:translateY(-2px)}to{transform:translateY(3px)}}
+.meta{margin-top:8px;font-size:12.5px;color:var(--muted);animation:rise .7s .32s both}
+.row{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-top:8px;animation:rise .7s .38s both}
+.pill{background:rgba(255,255,255,.72);border:1px solid #fff;border-radius:999px;padding:4px 12px;font-size:12.5px;font-weight:700;color:var(--navy);box-shadow:0 5px 14px rgba(31,42,68,.09);white-space:nowrap}
 .pill b{color:var(--deep)}
 
-/* phones */
-.phones{display:flex;gap:18px;overflow-x:auto;max-width:100vw;padding:30px 18px 34px;scroll-snap-type:x mandatory;justify-content:safe center;scrollbar-width:none}
-.phones::-webkit-scrollbar{display:none}
-.phone{flex:0 0 auto;width:214px;border-radius:34px;border:7px solid var(--navy);overflow:hidden;background:#fff;box-shadow:0 22px 44px rgba(31,42,68,.28);scroll-snap-align:center;animation:float 4.5s ease-in-out infinite alternate}
-.phone:nth-child(2){animation-delay:.6s;margin-top:22px}.phone:nth-child(3){animation-delay:1.2s}.phone:nth-child(4){animation-delay:1.8s;margin-top:22px}
-.phone img{display:block;width:100%}
-.cap{text-align:center;font-weight:800;color:var(--navy);font-size:14.5px;padding:8px 4px;background:#FBF8EF}
-
-/* sections */
-h2{font-size:clamp(25px,5vw,34px);font-weight:900;color:var(--navy);text-align:center;margin:34px 0 6px}
-.sub{text-align:center;color:var(--muted);margin-bottom:20px;font-size:17px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.glass{background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:24px;padding:20px;box-shadow:0 14px 34px rgba(31,42,68,.12);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.card .emoji{width:52px;height:52px;border-radius:16px;background:#F3E7BF;display:flex;align-items:center;justify-content:center;font-size:27px;margin-bottom:10px}
-.card h3{font-size:19.5px;font-weight:800;color:var(--navy)}
-.card p{font-size:16px;color:#555a66}
-.reveal{opacity:0;transform:translateY(40px) scale(.95);transition:opacity .6s,transform .7s cubic-bezier(.2,1.3,.4,1)}
+/* feature tiles: two per row, compact */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:14px}
+@media(min-width:680px){.grid{grid-template-columns:repeat(3,1fr)}}
+.glass{background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-radius:18px;padding:11px 12px;box-shadow:0 10px 24px rgba(31,42,68,.11);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.tile{text-align:right}
+.tile .h{display:flex;align-items:center;gap:8px}
+.tile .e{flex:0 0 auto;width:34px;height:34px;border-radius:11px;background:#F3E7BF;display:flex;align-items:center;justify-content:center;font-size:19px}
+.tile h3{font-size:15.5px;font-weight:800;color:var(--navy);line-height:1.25}
+.tile p{font-size:13px;color:#5a5f6c;margin-top:4px;line-height:1.5}
+.reveal{opacity:0;transform:translateY(30px) scale(.95);transition:opacity .5s,transform .6s cubic-bezier(.2,1.3,.4,1)}
 .reveal.on{opacity:1;transform:none}
-.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:4px 26px;margin-top:6px}
-.more li{list-style:none;padding:9px 0;border-bottom:1px dashed #E4DAB9;font-size:16.5px}
-.more li::before{content:"◆";color:var(--deep);margin-inline-end:9px;font-size:12px}
-.dark{background:rgba(31,42,68,.94);color:#fff;border-color:rgba(255,255,255,.12)}
-.dark h3{color:#F3D98B}.dark p{color:#D8DCE8}
-.steps{counter-reset:s}
-.step{position:relative;padding-inline-start:60px;min-height:52px;margin:14px 0}
-.step::before{counter-increment:s;content:counter(s);position:absolute;inset-inline-start:0;top:0;width:44px;height:44px;border-radius:14px;background:var(--gold);color:var(--navy);font-weight:900;font-size:21px;display:flex;align-items:center;justify-content:center}
-.step b{display:block;color:var(--navy);font-size:18px}
-.step span{color:#555a66;font-size:16px}
-.note{font-size:15px;color:var(--muted);text-align:center;margin-top:12px}
-.final{text-align:center;padding:36px 0 20px}
-footer{text-align:center;color:var(--muted);font-size:14px;padding:20px 0 34px}
+
+h2{font-size:25px;color:var(--navy);text-align:center;margin:20px 0 8px}
+h2 small{display:block;font-family:"Baloo Bhaijaan 2",sans-serif;font-size:13.5px;color:var(--muted);font-weight:500}
+
+/* phones: small, side-scrolling */
+.phones{display:flex;gap:11px;overflow-x:auto;max-width:100vw;padding:6px 14px 14px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.phones::-webkit-scrollbar{display:none}
+@media(min-width:680px){.phones{justify-content:center}}
+.phone{flex:0 0 auto;width:138px;border-radius:22px;border:5px solid var(--navy);overflow:hidden;background:#fff;box-shadow:0 14px 28px rgba(31,42,68,.24);scroll-snap-align:center;animation:float 4.4s ease-in-out infinite alternate}
+.phone:nth-child(2){animation-delay:.6s}.phone:nth-child(3){animation-delay:1.2s}.phone:nth-child(4){animation-delay:1.8s}
+.phone img{display:block;width:100%;height:232px;object-fit:cover;object-position:top}
+.cap{text-align:center;font-weight:800;color:var(--navy);font-size:12.5px;padding:5px 2px;background:#FBF8EF}
+
+/* more: chip cloud instead of a long list */
+.cloud{display:flex;flex-wrap:wrap;gap:7px;justify-content:center}
+.chip{background:rgba(255,255,255,.8);border:1px solid #fff;border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;color:var(--navy);box-shadow:0 5px 12px rgba(31,42,68,.08)}
+.chip::before{content:"◆";color:var(--deep);font-size:9px;margin-inline-end:6px}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;counter-reset:s}
+.step{text-align:center;padding:10px 6px}
+.step::before{counter-increment:s;content:counter(s);display:flex;margin:0 auto 5px;width:32px;height:32px;border-radius:11px;background:var(--gold);color:var(--navy);font-family:"Lalezar",sans-serif;font-size:19px;align-items:center;justify-content:center}
+.step b{display:block;color:var(--navy);font-size:13.5px;line-height:1.3}
+.step span{color:#5a5f6c;font-size:12px;line-height:1.4;display:block;margin-top:2px}
+.dark{background:rgba(31,42,68,.94);color:#fff;border-color:rgba(255,255,255,.12);margin-top:10px;font-size:13.5px}
+.dark b{color:#F3D98B}
+.final{text-align:center;padding:16px 0 6px}
+footer{text-align:center;color:var(--muted);font-size:12.5px;padding:10px 0 22px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="blob b1"></div><div class="blob b2"></div>
 
 <header class="wrap hero">
-  <img class="icon" src="img/icon.png" alt="أيقونة دفتر الذهب">
-  <h1>دفتر <span>الذهب</span></h1>
-  <p class="tag">حسابات الذهب والألماس على جوالك. فاتورة في ثوانٍ، وكشف لكل عميل ومصنع، ومن غير إنترنت.</p>
+  <div class="brand">
+    <img class="icon" src="img/icon.png" alt="أيقونة دفتر الذهب">
+    <h1>دفتر <span>الذهب</span></h1>
+  </div>
+  <p class="punch">ودّع الدفتر الورقي! حسابات <span class="swap" id="swap">الذهب</span> في جيبك</p>
+  <p class="tag">فاتورة في ثوانٍ · كشف لكل حساب · يعمل بلا إنترنت</p>
   <a class="cta" href="GoldLedger.apk" download>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
     حمّل التطبيق للأندرويد
   </a>
-  <p class="meta">الإصدار 1.0.2 · الحجم 25 ميجابايت · أندرويد 8 فأحدث</p>
-  <div class="soon">
-    <span class="pill"><b>قريباً</b> على Google Play</span>
-    <span class="pill"><b>لاحقاً</b> على App Store للآيفون</span>
+  <p class="meta">الإصدار 1.0.2 · 25 ميجابايت · أندرويد 8 فأحدث</p>
+  <div class="row">
+    <span class="pill"><b>قريباً</b> Google Play</span>
+    <span class="pill"><b>لاحقاً</b> App Store للآيفون</span>
+  </div>
+
+  <div class="grid">
+    <div class="glass tile reveal"><div class="h"><div class="e">👥</div><h3>كشف لكل حساب</h3></div><p>كم لك وكم عليك، نقداً وذهباً.</p></div>
+    <div class="glass tile reveal"><div class="h"><div class="e">🧾</div><h3>فاتورة في ثوانٍ</h3></div><p>اطبعها أو أرسلها بالواتساب.</p></div>
+    <div class="glass tile reveal"><div class="h"><div class="e">💎</div><h3>الألماس بالقيراط</h3></div><p>أكواده ومخزونه عند كل مصنع.</p></div>
+    <div class="glass tile reveal"><div class="h"><div class="e">📦</div><h3>مخزون حيّ</h3></div><p>يزيد وينقص مع كل عملية.</p></div>
+    <div class="glass tile reveal"><div class="h"><div class="e">💰</div><h3>الصندوق والبنك</h3></div><p>كل سند يدخله من نفسه.</p></div>
+    <div class="glass tile reveal"><div class="h"><div class="e">🔒</div><h3>بياناتك عندك</h3></div><p>على جوالك فقط، بقفل ونسخ احتياطي.</p></div>
   </div>
 </header>
 
-<div class="phones">
-  <div class="phone"><img src="img/accounts.jpg" alt="شاشة الحسابات" loading="lazy"><div class="cap">العملاء والمصانع</div></div>
-  <div class="phone"><img src="img/customer.jpg" alt="كشف حساب عميل" loading="lazy"><div class="cap">كشف الحساب</div></div>
-  <div class="phone"><img src="img/stock.jpg" alt="شاشة المخزون" loading="lazy"><div class="cap">المخزون</div></div>
-  <div class="phone"><img src="img/cash.jpg" alt="شاشة الصندوق" loading="lazy"><div class="cap">الصندوق والبنك</div></div>
-</div>
-
-<section class="wrap">
-  <h2>كل شغلك في مكان واحد</h2>
-  <p class="sub">صُمّم لمندوبي الذهب والألماس وأصحاب المحلات.</p>
-  <div class="grid">
-    <div class="glass card reveal"><div class="emoji">👥</div><h3>كشف لكل حساب</h3><p>عملاؤك ومصانعك وموردوك: كم لك وكم عليك، نقداً وذهباً، في كل لحظة.</p></div>
-    <div class="glass card reveal"><div class="emoji">🧾</div><h3>فاتورة في ثوانٍ</h3><p>الذهب بالجرام والألماس بالقيراط، صنف أو عدة أصناف، ثم اطبعها أو أرسلها بالواتساب.</p></div>
-    <div class="glass card reveal"><div class="emoji">💎</div><h3>الألماس بالقيراط</h3><p>أكواد الألماس عند كل مصنع، ومخزون الألماس والأحجار أمامك دائماً.</p></div>
-    <div class="glass card reveal"><div class="emoji">📦</div><h3>مخزون يتحدث تلقائياً</h3><p>ما تستلمه يدخل، وما تبيعه يخرج، وتكلفة كل قطعة وربحها محسوبان.</p></div>
-    <div class="glass card reveal"><div class="emoji">💰</div><h3>الصندوق والبنك</h3><p>كل سند قبض أو صرف يدخل الصندوق من نفسه: كاش، بنك، وذهب.</p></div>
-    <div class="glass card reveal"><div class="emoji">🔒</div><h3>بياناتك عندك</h3><p>يعمل بلا إنترنت، وبياناتك على جوالك فقط، مع قفل بكلمة دخول ونسخ احتياطي.</p></div>
+<section>
+  <h2>شاهد البرنامج <small>اسحب لترى الشاشات</small></h2>
+  <div class="phones">
+    <div class="phone"><img src="img/accounts.jpg" alt="شاشة الحسابات" loading="lazy"><div class="cap">العملاء والمصانع</div></div>
+    <div class="phone"><img src="img/customer.jpg" alt="كشف حساب عميل" loading="lazy"><div class="cap">كشف الحساب</div></div>
+    <div class="phone"><img src="img/stock.jpg" alt="شاشة المخزون" loading="lazy"><div class="cap">المخزون</div></div>
+    <div class="phone"><img src="img/cash.jpg" alt="شاشة الصندوق" loading="lazy"><div class="cap">الصندوق والبنك</div></div>
   </div>
 </section>
 
 <section class="wrap">
   <h2>وفيه أكثر</h2>
-  <div class="glass reveal">
-    <ul class="more">
-      <li>رصيد مستقل لكل عيار: 18 و21 و24</li>
-      <li>سندات قبض وصرف نقداً وذهباً</li>
-      <li>الميزانية العامة والربح أمام عينك</li>
-      <li>تقارير يومية وختامية تُطبع وتُصدَّر</li>
-      <li>عروض أسعار تُرسل للعميل</li>
-      <li>استلام البضاعة من المصنع بالقطعة أو بالوزن</li>
-      <li>شراء وبيع الذهب مع فرق السعر</li>
-      <li>تذكير بمواعيد السداد</li>
-      <li>تصدير واستيراد إكسل</li>
-      <li>ثلاثة أشكال للواجهة، منها الداكن</li>
-      <li>شرح قصير عند أول استعمال لكل شاشة</li>
-      <li>مساعد ذكي بالصوت (ضمن باقة الذكاء)</li>
-    </ul>
+  <div class="cloud reveal">
+    <span class="chip">رصيد لكل عيار 18 · 21 · 24</span>
+    <span class="chip">سندات قبض وصرف نقداً وذهباً</span>
+    <span class="chip">الميزانية والربح</span>
+    <span class="chip">تقارير تُطبع</span>
+    <span class="chip">عروض أسعار</span>
+    <span class="chip">استلام البضاعة من المصنع</span>
+    <span class="chip">شراء وبيع الذهب</span>
+    <span class="chip">تذكير بالسداد</span>
+    <span class="chip">إكسل</span>
+    <span class="chip">ثلاثة أشكال للواجهة</span>
+    <span class="chip">شرح عند أول استعمال</span>
+    <span class="chip">مساعد ذكي بالصوت (باقة الذكاء)</span>
   </div>
 </section>
 
 <section class="wrap">
   <h2>التثبيت في ثلاث خطوات</h2>
-  <div class="glass reveal steps">
-    <div class="step"><b>اضغط «حمّل التطبيق»</b><span>ينزل ملف التطبيق على جوالك الأندرويد.</span></div>
-    <div class="step"><b>افتح الملف واسمح بالتثبيت</b><span>إن سألك الجوال عن «تثبيت تطبيقات من هذا المصدر» فاسمح، ثم اضغط «تثبيت».</span></div>
-    <div class="step"><b>افتح دفتر الذهب وابدأ</b><span>جولة ترحيبية قصيرة تعرّفك بالبرنامج، ثم سجّل أول حساب.</span></div>
+  <div class="steps">
+    <div class="glass step reveal"><b>حمّل</b><span>اضغط زر التحميل</span></div>
+    <div class="glass step reveal"><b>ثبّت</b><span>افتح الملف واسمح بالتثبيت</span></div>
+    <div class="glass step reveal"><b>ابدأ</b><span>جولة قصيرة ثم أول حساب</span></div>
   </div>
-  <div class="glass dark reveal" style="margin-top:14px">
-    <h3>النسخة التجريبية</h3>
-    <p>النسخة التجريبية تعمل بثلاثة حسابات و15 حركة لكل حساب. أعجبك؟ فعّل النسخة الكاملة بكود التفعيل من «المزيد ← تفعيل التطبيق».</p>
-  </div>
-  <p class="note">التطبيق لا يرفع بياناتك إلى أي خادم. خذ نسخة احتياطية كل فترة من داخل البرنامج.</p>
+  <div class="glass dark reveal"><b>النسخة التجريبية:</b> ثلاثة حسابات و15 حركة لكل حساب. للنسخة الكاملة فعّلها بكود التفعيل من «المزيد ← تفعيل التطبيق». بياناتك لا تُرفع إلى أي خادم.</div>
 </section>
 
 <section class="wrap final">
   <a class="cta" href="GoldLedger.apk" download>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
     حمّل التطبيق الآن
   </a>
-  <div class="soon"><span class="pill"><b>قريباً</b> على Google Play</span><span class="pill"><b>لاحقاً</b> على App Store</span></div>
 </section>
 
-<footer class="wrap">دفتر الذهب · حسابك مضبوط</footer>
+<footer class="wrap"><span class="lz" style="font-size:17px;color:var(--navy)">دفتر الذهب</span> · حسابك مضبوط</footer>
 
 <script>
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .15 });
-document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 3) * 90 + 'ms'; io.observe(el); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 6) * 70 + 'ms'; io.observe(el); });
+const words = ['الذهب', 'الألماس', 'العملاء', 'المصانع', 'المخزون'], sw = document.getElementById('swap'); let wi = 0;
+setInterval(() => { sw.classList.add('out'); setTimeout(() => { wi = (wi + 1) % words.length; sw.textContent = words[wi]; sw.classList.remove('out'); }, 280); }, 1900);
 </script>
 </body>
 </html>
