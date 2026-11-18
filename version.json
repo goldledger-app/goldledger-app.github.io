@@ -1,6 +1,6 @@
 {
-  "versionCode": 4,
-  "versionName": "1.0.3",
-  "notes": "استيراد ذكي من أي ملف إكسل، وشرح عند أول استعمال لكل شاشة.",
+  "versionCode": 5,
+  "versionName": "1.0.4",
+  "notes": "خانة «تكلفة الجرام» في البيع بالوزن مع ربح كل صنف.",
   "url": "https://goldledger-app.github.io/"
 }
