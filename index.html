@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دفتر الذهب — حمّل التطبيق</title>
+<meta name="description" content="دفتر الذهب: حسابات الذهب والألماس على جوالك، بلا إنترنت. كشوف العملاء والمصانع، الفواتير، المخزون والصندوق.">
+<meta property="og:title" content="دفتر الذهب — حسابات الذهب والألماس على جوالك">
+<meta property="og:description" content="فاتورة في ثوانٍ، كشف لكل عميل ومصنع، مخزون وصندوق يتحدثان تلقائياً. حمّله الآن.">
+<meta property="og:image" content="img/icon.png">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1F2A44;--gold:#E2C34A;--deep:#B8860B;--ink:#2B2F3A;--muted:#6B7080;--green:#1B8A5A}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:"Tajawal","Geeza Pro",-apple-system,sans-serif;color:var(--ink);background:linear-gradient(160deg,#E9EEFB 0%,#F7F1E3 45%,#EBDDB8 100%) fixed;min-height:100vh;overflow-x:hidden;line-height:1.8}
+.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+.blob{position:fixed;border-radius:50%;filter:blur(2px);z-index:0;animation:drift 9s ease-in-out infinite alternate}
+.b1{width:300px;height:300px;background:rgba(226,195,74,.38);top:-70px;right:-80px}
+.b2{width:340px;height:340px;background:rgba(143,168,240,.26);bottom:-110px;left:-110px;animation-duration:12s}
+.b3{width:170px;height:170px;background:rgba(226,195,74,.25);top:46%;left:8%;animation-duration:7s}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(18px,-26px) scale(1.08)}}
+header,section,footer{position:relative;z-index:1}
+
+/* hero */
+.hero{padding:44px 0 26px;text-align:center}
+.icon{width:112px;height:112px;border-radius:28px;box-shadow:0 18px 40px rgba(31,42,68,.25);animation:rise .8s cubic-bezier(.2,1.3,.4,1) both,float 4s ease-in-out 1s infinite alternate}
+h1{font-size:clamp(34px,7vw,58px);font-weight:900;color:var(--navy);margin-top:16px;line-height:1.25;animation:rise .8s .12s cubic-bezier(.2,1.3,.4,1) both}
+h1 span{background:linear-gradient(90deg,#B8860B,#E2C34A,#B8860B);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 3.5s linear infinite}
+@keyframes shine{to{background-position:-200% 0}}
+.tag{font-size:clamp(17px,3.6vw,22px);color:var(--muted);max-width:620px;margin:10px auto 0;animation:rise .8s .24s cubic-bezier(.2,1.3,.4,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(46px) scale(.9)}to{opacity:1;transform:none}}
+@keyframes float{from{transform:translateY(-5px)}to{transform:translateY(7px)}}
+.cta{display:inline-flex;align-items:center;gap:12px;margin-top:26px;padding:17px 34px;border-radius:22px;background:var(--navy);color:#fff;font-weight:800;font-size:21px;text-decoration:none;position:relative;box-shadow:0 16px 34px rgba(31,42,68,.3);animation:rise .8s .36s cubic-bezier(.2,1.3,.4,1) both;transition:transform .15s}
+.cta:active{transform:scale(.96)}
+.cta::before{content:"";position:absolute;inset:0;border-radius:22px;background:var(--gold);z-index:-1;animation:pulse 1.6s ease-out infinite}
+@keyframes pulse{from{transform:scale(1);opacity:.7}to{transform:scale(1.28,1.6);opacity:0}}
+.cta svg{width:26px;height:26px}
+.meta{margin-top:14px;font-size:15px;color:var(--muted);animation:rise .8s .46s both}
+.soon{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px;animation:rise .8s .56s both}
+.pill{background:rgba(255,255,255,.7);border:1px solid #fff;border-radius:999px;padding:7px 16px;font-size:14.5px;font-weight:700;color:var(--navy);box-shadow:0 8px 20px rgba(31,42,68,.1)}
+.pill b{color:var(--deep)}
+
+/* phones */
+.phones{display:flex;gap:18px;overflow-x:auto;max-width:100vw;padding:30px 18px 34px;scroll-snap-type:x mandatory;justify-content:safe center;scrollbar-width:none}
+.phones::-webkit-scrollbar{display:none}
+.phone{flex:0 0 auto;width:214px;border-radius:34px;border:7px solid var(--navy);overflow:hidden;background:#fff;box-shadow:0 22px 44px rgba(31,42,68,.28);scroll-snap-align:center;animation:float 4.5s ease-in-out infinite alternate}
+.phone:nth-child(2){animation-delay:.6s;margin-top:22px}.phone:nth-child(3){animation-delay:1.2s}.phone:nth-child(4){animation-delay:1.8s;margin-top:22px}
+.phone img{display:block;width:100%}
+.cap{text-align:center;font-weight:800;color:var(--navy);font-size:14.5px;padding:8px 4px;background:#FBF8EF}
+
+/* sections */
+h2{font-size:clamp(25px,5vw,34px);font-weight:900;color:var(--navy);text-align:center;margin:34px 0 6px}
+.sub{text-align:center;color:var(--muted);margin-bottom:20px;font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.glass{background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:24px;padding:20px;box-shadow:0 14px 34px rgba(31,42,68,.12);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.card .emoji{width:52px;height:52px;border-radius:16px;background:#F3E7BF;display:flex;align-items:center;justify-content:center;font-size:27px;margin-bottom:10px}
+.card h3{font-size:19.5px;font-weight:800;color:var(--navy)}
+.card p{font-size:16px;color:#555a66}
+.reveal{opacity:0;transform:translateY(40px) scale(.95);transition:opacity .6s,transform .7s cubic-bezier(.2,1.3,.4,1)}
+.reveal.on{opacity:1;transform:none}
+.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:4px 26px;margin-top:6px}
+.more li{list-style:none;padding:9px 0;border-bottom:1px dashed #E4DAB9;font-size:16.5px}
+.more li::before{content:"◆";color:var(--deep);margin-inline-end:9px;font-size:12px}
+.dark{background:rgba(31,42,68,.94);color:#fff;border-color:rgba(255,255,255,.12)}
+.dark h3{color:#F3D98B}.dark p{color:#D8DCE8}
+.steps{counter-reset:s}
+.step{position:relative;padding-inline-start:60px;min-height:52px;margin:14px 0}
+.step::before{counter-increment:s;content:counter(s);position:absolute;inset-inline-start:0;top:0;width:44px;height:44px;border-radius:14px;background:var(--gold);color:var(--navy);font-weight:900;font-size:21px;display:flex;align-items:center;justify-content:center}
+.step b{display:block;color:var(--navy);font-size:18px}
+.step span{color:#555a66;font-size:16px}
+.note{font-size:15px;color:var(--muted);text-align:center;margin-top:12px}
+.final{text-align:center;padding:36px 0 20px}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:20px 0 34px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+
+<header class="wrap hero">
+  <img class="icon" src="img/icon.png" alt="أيقونة دفتر الذهب">
+  <h1>دفتر <span>الذهب</span></h1>
+  <p class="tag">حسابات الذهب والألماس على جوالك. فاتورة في ثوانٍ، وكشف لكل عميل ومصنع، ومن غير إنترنت.</p>
+  <a class="cta" href="GoldLedger.apk" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
+    حمّل التطبيق للأندرويد
+  </a>
+  <p class="meta">الإصدار 1.0.2 · الحجم 25 ميجابايت · أندرويد 8 فأحدث</p>
+  <div class="soon">
+    <span class="pill"><b>قريباً</b> على Google Play</span>
+    <span class="pill"><b>لاحقاً</b> على App Store للآيفون</span>
+  </div>
+</header>
+
+<div class="phones">
+  <div class="phone"><img src="img/accounts.jpg" alt="شاشة الحسابات" loading="lazy"><div class="cap">العملاء والمصانع</div></div>
+  <div class="phone"><img src="img/customer.jpg" alt="كشف حساب عميل" loading="lazy"><div class="cap">كشف الحساب</div></div>
+  <div class="phone"><img src="img/stock.jpg" alt="شاشة المخزون" loading="lazy"><div class="cap">المخزون</div></div>
+  <div class="phone"><img src="img/cash.jpg" alt="شاشة الصندوق" loading="lazy"><div class="cap">الصندوق والبنك</div></div>
+</div>
+
+<section class="wrap">
+  <h2>كل شغلك في مكان واحد</h2>
+  <p class="sub">صُمّم لمندوبي الذهب والألماس وأصحاب المحلات.</p>
+  <div class="grid">
+    <div class="glass card reveal"><div class="emoji">👥</div><h3>كشف لكل حساب</h3><p>عملاؤك ومصانعك وموردوك: كم لك وكم عليك، نقداً وذهباً، في كل لحظة.</p></div>
+    <div class="glass card reveal"><div class="emoji">🧾</div><h3>فاتورة في ثوانٍ</h3><p>الذهب بالجرام والألماس بالقيراط، صنف أو عدة أصناف، ثم اطبعها أو أرسلها بالواتساب.</p></div>
+    <div class="glass card reveal"><div class="emoji">💎</div><h3>الألماس بالقيراط</h3><p>أكواد الألماس عند كل مصنع، ومخزون الألماس والأحجار أمامك دائماً.</p></div>
+    <div class="glass card reveal"><div class="emoji">📦</div><h3>مخزون يتحدث تلقائياً</h3><p>ما تستلمه يدخل، وما تبيعه يخرج، وتكلفة كل قطعة وربحها محسوبان.</p></div>
+    <div class="glass card reveal"><div class="emoji">💰</div><h3>الصندوق والبنك</h3><p>كل سند قبض أو صرف يدخل الصندوق من نفسه: كاش، بنك، وذهب.</p></div>
+    <div class="glass card reveal"><div class="emoji">🔒</div><h3>بياناتك عندك</h3><p>يعمل بلا إنترنت، وبياناتك على جوالك فقط، مع قفل بكلمة دخول ونسخ احتياطي.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>وفيه أكثر</h2>
+  <div class="glass reveal">
+    <ul class="more">
+      <li>رصيد مستقل لكل عيار: 18 و21 و24</li>
+      <li>سندات قبض وصرف نقداً وذهباً</li>
+      <li>الميزانية العامة والربح أمام عينك</li>
+      <li>تقارير يومية وختامية تُطبع وتُصدَّر</li>
+      <li>عروض أسعار تُرسل للعميل</li>
+      <li>استلام البضاعة من المصنع بالقطعة أو بالوزن</li>
+      <li>شراء وبيع الذهب مع فرق السعر</li>
+      <li>تذكير بمواعيد السداد</li>
+      <li>تصدير واستيراد إكسل</li>
+      <li>ثلاثة أشكال للواجهة، منها الداكن</li>
+      <li>شرح قصير عند أول استعمال لكل شاشة</li>
+      <li>مساعد ذكي بالصوت (ضمن باقة الذكاء)</li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>التثبيت في ثلاث خطوات</h2>
+  <div class="glass reveal steps">
+    <div class="step"><b>اضغط «حمّل التطبيق»</b><span>ينزل ملف التطبيق على جوالك الأندرويد.</span></div>
+    <div class="step"><b>افتح الملف واسمح بالتثبيت</b><span>إن سألك الجوال عن «تثبيت تطبيقات من هذا المصدر» فاسمح، ثم اضغط «تثبيت».</span></div>
+    <div class="step"><b>افتح دفتر الذهب وابدأ</b><span>جولة ترحيبية قصيرة تعرّفك بالبرنامج، ثم سجّل أول حساب.</span></div>
+  </div>
+  <div class="glass dark reveal" style="margin-top:14px">
+    <h3>النسخة التجريبية</h3>
+    <p>النسخة التجريبية تعمل بثلاثة حسابات و15 حركة لكل حساب. أعجبك؟ فعّل النسخة الكاملة بكود التفعيل من «المزيد ← تفعيل التطبيق».</p>
+  </div>
+  <p class="note">التطبيق لا يرفع بياناتك إلى أي خادم. خذ نسخة احتياطية كل فترة من داخل البرنامج.</p>
+</section>
+
+<section class="wrap final">
+  <a class="cta" href="GoldLedger.apk" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
+    حمّل التطبيق الآن
+  </a>
+  <div class="soon"><span class="pill"><b>قريباً</b> على Google Play</span><span class="pill"><b>لاحقاً</b> على App Store</span></div>
+</section>
+
+<footer class="wrap">دفتر الذهب · حسابك مضبوط</footer>
+
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .15 });
+document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 3) * 90 + 'ms'; io.observe(el); });
+</script>
+</body>
+</html>
